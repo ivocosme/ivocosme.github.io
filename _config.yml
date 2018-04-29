@@ -45,6 +45,32 @@ social:
   - title: "envelope"
     url: "mailto:ivocosme@gmail.com"
 
+skills:
+  - title: "Android"
+    filename: "android.png"
+  - title: "Swift"
+    filename: "swift.png"
+  - title: "OutSystems"
+    filename: "outsystems.png"
+  - title: "Java"
+    filename: "java.png"
+  - title: "JavaScript"
+    filename: "javascript.png"
+  - title: "NodeJS"
+    filename: "node.png"
+  - title: "Ethereum"
+    filename: "ethereum.png"
+  - title: "Docker"
+    filename: "docker.png"
+  - title: "Mulesoft"
+    filename: "mulesoft.png"
+  - title: "Ruby on Rails"
+    filename: "rails.png"
+  - title: "Erlang"
+    filename: "erlang.png"
+
+skills_limit: 6
+
 background:
 
 google_analytics: UA-106538846-1

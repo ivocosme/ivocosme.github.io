@@ -21,5 +21,35 @@ comments: false
                 <li><a href="{{site.url}}/feed.xml" target="_blank"><i class="fa fa-rss fa-fw"></i></a></li>
             </ul>
         </div>
+        <br/>
+        <h1>
+            <span class="entry-title">Technical Skills</span>
+        </h1>
+        {% if site.skills.size > 0 %}
+            {% assign currentRow = 0 %}
+            {% assign currentColumn = 0 %}
+            {% assign lastIndex = site.skills.size | minus: 1 %}
+            {% for index in (0..lastIndex) %}
+                {% if currentColumn == 0 %}
+                    <ul class="list-inline">
+                {% endif %}
+                
+                {% assign skill = site.skills[index] %}
+                <li>
+                    <img src="{{site.url}}/images/skills_{{skill.filename}}" alt="{{skill.title}}"/>
+                </li>
+                {% assign index = index | plus: 1 %}
+
+                {% assign lastColumn = site.skills_limit | minus: 1 %}
+                {% if currentColumn == lastColumn %}
+                    </ul>
+                    {% assign currentColumn = 0 %}
+                    {% assign currentRow = currentRow | plus: 1 %}
+                {% else %}
+                    {% assign currentColumn = currentColumn | plus: 1 %}
+                {% endif %}
+            
+            {% endfor %}
+        {% endif %}
     </div>
 </div>
